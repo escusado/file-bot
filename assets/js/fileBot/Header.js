@@ -30,6 +30,12 @@ Class('Header').inherits(Widget)({
             this.titleEl.html(name);
 
             return this;
+        },
+
+        changeBackground : function(){
+            this.element.css('background-color', 'red');
+
+            return this;
         }
     }
 });
