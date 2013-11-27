@@ -10,11 +10,10 @@ Class('FileBot').inherits(Widget)({
             return this;
         },
 
-        emitEvent : function(){
-            socket.emit('hello-i-am-the-socket', { my: 'data fuckeeer' });
-
-            this.bindEvents();
-        },
+        // emitEvent : function(){
+        //     socket.emit('hello-i-am-the-socket', { my: 'data fuckeeer' });
+        //     this.bindEvents();
+        // },
 
         bindEvents : function(){
             this.element.click(function(){

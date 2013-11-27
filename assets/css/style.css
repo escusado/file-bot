@@ -1,0 +1,27 @@
+.file-bot-wrapper{
+    width: 400px;
+
+    background-color: red;
+}
+
+.file-bot-wrapper .header{
+
+    background-color: #333;
+}
+
+.file-bot-wrapper .header .title{
+    height: 50px;
+    width: 50%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+.file-bot-wrapper .header .button-container{
+    width: 50%;
+
+
+}

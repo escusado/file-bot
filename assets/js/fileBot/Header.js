@@ -1,9 +1,8 @@
 Class('Header').inherits(Widget)({
 
     HTML : '<div>\
-        <div class="title">This is a title</div>\
+        <div class="title">Densidad de flujo magnético e inducción magnética.</div>\
         <div class="button-container"></div>\
-        <input type="text"/>\
     </div>',
 
     ELEMENT_CLASS: 'header',
@@ -13,17 +12,18 @@ Class('Header').inherits(Widget)({
             Widget.prototype.init.call(this, config);
 
             this.titleEl = this.element.find('.title');
-            this.inputEl = this.element.find('input');
+            this.buttonEl = this.element.find('.button-container');
 
-            this.bindEvents();
+            this.downloadButton = new DownloadButton();
+            this.downloadButton.render(this.buttonEl);
+
+            this._bindEvents();
 
             return this;
         },
 
-        bindEvents : function(){
-            this.inputEl.bind('keyup', function(ev){
+        _bindEvents : function(){
 
-            });
         },
 
         setLabel : function(name){
