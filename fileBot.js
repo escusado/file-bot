@@ -31,6 +31,29 @@ Neon.Class('FileBot')({
               res.sendfile('index.html');
             });
 
+            app.get('/todo-app', function(req, res){
+              res.sendfile('todo.html');
+            });
+
+            app.get('/todo-data', function(req, res){
+              var dummyData = [
+                {name: 'get tortillas',status : 'active'},
+                {name: 'code todo app',status : 'done'},
+                {name: 'fix car',status : 'active'},
+                {name: 'buy ps4',status : 'done'},
+                {name: 'cook meth',status : 'active'},
+                {name: 'send computer to mars',status : 'active'},
+                {name: 'smoke some pot',status : 'done'},
+                {name: 'paint walls',status : 'active'},
+                {name: 'wash dishes',status : 'done'},
+                {name: 'make bed',status : 'active'},
+                {name: 'fuck carmen salinas',status : 'done'}
+              ];
+
+              res.send(JSON.stringify(dummyData));
+            });
+
+
             return this;
         },
 
